@@ -1,0 +1,147 @@
+/*Carrousel*/
+.barrita {
+    width: 60px; 
+    height: 4px; 
+    background-color: #bed741;
+}
+
+.barrita-tecnologia {
+    width: 700px;
+    height: 4px; 
+    background-color: #bed741;
+}
+
+.item {
+    background: linear-gradient(145deg, #1a1a1a, #0a0a0a);
+    padding: 2rem;
+    border: 1px solid rgba(190, 215, 65, 0.1);
+    text-align: center;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    height: 100%; 
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; 
+    border-radius: 15px;
+}
+
+.item:hover {
+    border-color: #bed741;
+    box-shadow: 0 0 20px rgba(190, 215, 65, 0.15);
+    transform: translateY(-5px);
+}
+
+.item img {
+    width: 100%;
+    height: 220px; 
+    object-fit: cover; 
+    border-radius: 10px;
+    margin-bottom: 1.5rem;
+    transition: 0.5s ease;
+}
+
+.item:hover img {
+    filter: grayscale(0);
+    transform: scale(1.05);
+}
+
+.item h4 {
+    color: #bed741;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: 700;
+}
+
+.item span {
+    color: #999;
+    font-size: 0.9rem;
+    line-height: 1.6;
+    display: block;
+}
+
+
+.carousel-control-prev, .carousel-control-next {
+    width: 5%;
+    opacity: 0.8;
+}
+
+
+/* Botón */
+.btn-viper {
+    text-decoration: none; 
+    position: relative;
+    background: transparent;
+    color: #bed741;
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 3px;
+    padding: 15px 40px;
+    border: 1px solid #bed741;
+    overflow: hidden;
+    transition: all 0.4s ease;
+    cursor: pointer;
+    display: inline-flex; 
+    align-items: center;
+    gap: 15px;
+    box-shadow: 0 0 10px rgba(190, 215, 65, 0.2);
+}
+
+.puntito {
+    width: 8px;
+    height: 8px;
+    background-color: #bed741;
+    border-radius: 50%;
+    box-shadow: 0 0 15px #bed741;
+    animation: respiracion 2s infinite;
+}
+
+.btn-viper:hover {
+    background-color: #bed741;
+    color: #121212;
+    box-shadow: 0 0 30px rgba(190, 215, 65, 0.6);
+    transform: translateY(-3px);
+}
+
+.btn-viper:hover .puntito {
+    background-color: #121212;
+    box-shadow: none;
+}
+
+/* Animación de respiración */
+@keyframes respiracion {
+    0% { transform: scale(1); opacity: 1; }
+    50% { transform: scale(1.5); opacity: 0.5; }
+    100% { transform: scale(1); opacity: 1; }
+}
+
+/* Efecto de brillo al hacer click */
+.btn-viper:active {
+    transform: translateY(0);
+    box-shadow: 0 0 15px rgba(190, 215, 65, 0.8);
+}
+
+/*TECNOLOGIA*/
+
+.contenedor-video {
+    position: relative;
+    padding: 10px;
+}
+
+.contenedor-video video {
+    box-shadow: 0 0 30px rgba(190, 215, 65, 0.1);
+    transition: 0.5s ease;
+}
+
+.contenedor-video:hover video {
+    border-color: #bed741 !important;
+    box-shadow: 0 0 50 rgba(190, 215, 65, 0.25);
+}
+
+.list-unstyled li{
+    font-size: 1.1rem;
+    line-height: 1.8;
+}
+
+.list-unstyled strong {
+    color: #ffffff;
+    letter-spacing: 1px;
+}
